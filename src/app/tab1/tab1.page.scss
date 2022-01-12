@@ -1,4 +1,62 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+*{
+  margin: 0;
+}
+.container{
+  display: flex;
+}
+
+.left{
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  padding-left: 8px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.right{
+  width: 25%;
+  height: 100vh;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .square{
+    width: 30%;
+    height: 32vh;
+    background-color: #04adf0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .rect{
+    width: 69%;
+    height: 32vh;
+    background-color: #1739d1;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.right{
+  .name{
+    height: 25vh;
+    text-align: center;
+    padding-top: 5vh;
+  }
+  .image{
+    height:75vh;
+    img{
+      height: 75vh;
+      object-fit: cover;
+    }
+  }
 }
