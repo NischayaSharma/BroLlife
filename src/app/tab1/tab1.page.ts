@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 import { DataService } from '../services/data.service'
 import { ElectronService } from '../services/electron.service'
 import { EventService } from '../services/events.service'
@@ -17,7 +18,8 @@ export class Tab1Page  implements OnInit {
   constructor(
     public electronService: ElectronService,
     private data: DataService,
-    private events: EventService
+    private events: EventService,
+    private router:Router
   ) {
     this.events.subscribe('database:available', (info) => {
       console.log('Database is now available')
@@ -37,6 +39,12 @@ export class Tab1Page  implements OnInit {
       .then(info => ctx.dbInfo = info)
       .catch(err => console.log(err))
     }
+  }
+
+  navigate(page:string){
+    this.router.navigateByUrl('/tabs/tab2')
+    console.log('Navigating to ' + this.router.url)
+
   }
 
 }
