@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular'
 import { SplashScreen } from '@ionic-native/splash-screen/ngx'
 import { StatusBar } from '@ionic-native/status-bar/ngx'
 import { DataService } from './services/data.service'
+import { AssignmentServicesService } from './tab2/assignment-services.service'
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private data: DataService
+    private data: DataService,
+    private assignment: AssignmentServicesService
   ) {
     this.initializeApp()
   }
@@ -25,6 +27,21 @@ export class AppComponent {
         this.statusBar.styleLightContent()
         this.splashScreen.hide()
       }
+          let body={
+      name: "John",
+      email: "sidmehta0201+11@gmail.com",
+      contact:"+918286143280",
+      password:"123"
+    }
+    this.assignment.createUser(body).toPromise<any>()
+      .then(data=>{
+        console.log(data);
+        this.data.user=data.data;
+      })
+      .catch(err=>{
+        console.log(err);
+      });
+
 
       this.data.setup()
       .then(info => {

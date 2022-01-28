@@ -13,6 +13,13 @@ export class DataService {
 
   public db: any
   public dbInfo: any
+  private _user: any = null;
+  public get user() {
+    return this._user;
+  }
+  public set user(user: any) {
+    this._user = user;
+  }
 
   constructor(
     public electron: ElectronService,
