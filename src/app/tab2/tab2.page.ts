@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 import { AssignmentServicesService } from './assignment-services.service';
 
 @Component({
@@ -11,22 +12,14 @@ export class Tab2Page implements OnInit {
   phone:string;
   date:string;
 
-  constructor(private assignment:AssignmentServicesService) {}
+  constructor(private assignment:AssignmentServicesService, 
+    private dataService: DataService) {}
   ngOnInit(): void {}
-
-  user:any = {
-    contact: "+918286143280",
-    email: "sidmehta0201+11@gmail.com",
-    name: "John",
-    password: "123",
-    __v: 0,
-    _id: "61f438ea20758888ab630817",
-  }
 
   createAssignment() {
     console.log(this.title,this.phone);
     let body={
-        userId: this.user._id,
+        userId: this.dataService.user._id,
         title: this.title,
         deadline: this.date,
         sendEmail: true,
