@@ -105,14 +105,14 @@ export class Tab1Page  implements OnInit {
 //     });
 //   }
 
-//   joinRoom() {
-//     var date = new Date();
-//     localStorage.setItem("user", JSON.stringify(this.newUser));
-//     this.getChatByRoom(this.newUser.room);
-//     this.msgData = { room: this.newUser.room, nickname: this.newUser.nickname, message: '' };
-//     this.joinned = true;
-//     this.socket.emit('save-message', { room: this.newUser.room, nickname: this.newUser.nickname, message: 'Join this room', updated_at: date });
-//   }
+  // joinRoom() {
+  //   var date = new Date();
+  //   localStorage.setItem("user", JSON.stringify(this.newUser));
+  //   this.getChatByRoom(this.newUser.room);
+  //   this.msgData = { room: this.newUser.room, nickname: this.newUser.nickname, message: '' };
+  //   this.joinned = true;
+  //   this.socket.emit('save-message', { room: this.newUser.room, nickname: this.newUser.nickname, message: 'Join this room', updated_at: date });
+  // }
 
 //   sendMessage() {
 //     this.chatService.saveChat(this.msgData).then((result) => {

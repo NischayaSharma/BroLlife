@@ -1,0 +1,17 @@
+<ion-card class="chatbox">
+  <div class="header">Header</div>
+  <div *ngIf="chatLoaded" class="chats-container">
+    <div *ngFor="let chat of chats" class="chat-bubble-container">
+      <div [class]="me(chat.messageFrom) ? 'left-chat-bubble':'right-chat-bubble'">
+        <div class="chat-bubble-text">{{chat.message}}</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="chatLoaded" class="input-container">
+    <ion-input type="text" placeholder="Type a message..." [(ngModel)]="message"></ion-input>
+    <ion-button (click)="sendMessage()">Send</ion-button>
+  </div>
+  <div *ngIf="!chatLoaded">
+    <ion-spinner></ion-spinner>
+  </div>
+</ion-card>
