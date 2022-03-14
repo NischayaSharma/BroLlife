@@ -23,7 +23,8 @@ export class Tab2Page implements OnInit {
         title: this.title,
         deadline: this.date,
         sendEmail: true,
-        sendWhatsapp: true
+        sendWhatsapp: true,
+        subjectId: "62163ebb30ba750b8a873f2e"
     }
     this.assignment.createAssignment(body).toPromise()
       .then(data=>{

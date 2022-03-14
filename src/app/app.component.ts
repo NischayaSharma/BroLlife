@@ -29,7 +29,7 @@ export class AppComponent {
       }
           let body={
       name: "John",
-      email: "sidmehta0201+11@gmail.com",
+      email: "nischaya.gq+01@gmail.com",
       contact:"+918286143280",
       password:"123"
     }
