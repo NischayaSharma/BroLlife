@@ -21,10 +21,6 @@ export class Tab2Page implements OnInit {
     let body={
         userId: this.dataService.user._id,
         title: this.title,
-        deadline: this.date,
-        sendEmail: true,
-        sendWhatsapp: true,
-        subjectId: "62163ebb30ba750b8a873f2e"
     }
     this.assignment.createAssignment(body).toPromise()
       .then(data=>{

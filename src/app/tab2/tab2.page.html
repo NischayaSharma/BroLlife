@@ -1,27 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button slot="start">Back</ion-back-button>
+    <ion-title>Assignment Finder</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-list>
+  <ion-card style="width: 50vh;margin-left: 70vh;margin-top: 20%;">
+    <ion-list>
     <ion-item >
       <ion-label>Title</ion-label>
       <ion-input [(ngModel)]="title" type="text" placeholder="eg 'Artificial Intelligence'"></ion-input>
     </ion-item>
-    <ion-item >
-      <ion-label>Number</ion-label>
-      <ion-input [(ngModel)]="phone" type="number" placeholder="+91-8888888888"></ion-input>
-    </ion-item>
-    <ion-item >
-      <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="date"></ion-datetime>
-    </ion-item>
-    <ion-item >
-      <ion-button expand="block" color="primary" (click)="createAssignment()">Submit</ion-button>
-    </ion-item>
-    <ion-item >
-      <ion-button expand="block" color="primary" (click)="fillWithSample()">Fill Up form with sample Values</ion-button>
-    </ion-item>
+      <ion-button expand="block" style="width: 70%;margin-left: 15%;margin-top: 10px;"  color="primary" (click)="createAssignment()">Submit</ion-button>
   </ion-list>
+  </ion-card>
+  <p style="opacity: 0.7;font-size: 0.9em;margin-left: 70vh;margin-top: 20px;">You will recieve a mail for all the articles on your registered email id</p>
 </ion-content>

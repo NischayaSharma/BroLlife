@@ -1,5 +1,5 @@
 <ion-card class="chatbox">
-  <div class="header">Header</div>
+  <div class="header" style="padding-top:15px;padding-left:10px">Global Chat</div>
   <div *ngIf="chatLoaded" class="chats-container">
     <div *ngFor="let chat of chats" class="chat-bubble-container">
       <div [class]="me(chat.messageFrom) ? 'left-chat-bubble':'right-chat-bubble'">

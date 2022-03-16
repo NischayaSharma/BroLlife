@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: 'assignment-reminder',
     loadChildren: './tab1/assignment-reminder/assignment-reminder.module#AssignmentReminderPageModule'
-  }
+  },
+  // {
+  //   path: 'articles',
+  //   loadChildren: () => import('./tab2/articles/articles.module').then( m => m.ArticlesPageModule)
+  // }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
